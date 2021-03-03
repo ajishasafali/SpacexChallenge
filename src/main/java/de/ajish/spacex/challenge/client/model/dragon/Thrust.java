@@ -1,10 +1,5 @@
 package de.ajish.spacex.challenge.client.model.dragon;
 
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -20,8 +15,6 @@ public class Thrust {
     private Integer kN;
     @JsonProperty("lbf")
     private Integer lbf;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("kN")
     public Integer getKN() {
@@ -41,16 +34,6 @@ public class Thrust {
     @JsonProperty("lbf")
     public void setLbf(Integer lbf) {
         this.lbf = lbf;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

@@ -1,10 +1,5 @@
 package de.ajish.spacex.challenge.client.model.company;
 
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -26,8 +21,6 @@ public class Links {
     private String twitter;
     @JsonProperty("elon_twitter")
     private String elonTwitter;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("website")
     public String getWebsite() {
@@ -67,16 +60,6 @@ public class Links {
     @JsonProperty("elon_twitter")
     public void setElonTwitter(String elonTwitter) {
         this.elonTwitter = elonTwitter;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }
