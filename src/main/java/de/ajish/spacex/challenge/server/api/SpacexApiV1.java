@@ -1,35 +1,36 @@
 package de.ajish.spacex.challenge.server.api;
 
 import de.ajish.spacex.challenge.client.SpacexAccessClient;
-import de.ajish.spacex.challenge.server.model.Crew;
-import org.codehaus.jackson.map.ObjectMapper;
+import de.ajish.spacex.challenge.client.model.company.Company;
+import de.ajish.spacex.challenge.server.model.dragons.DragonsDetails;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import java.io.IOException;
 
-@Path("/v1/crew-details")
+@Path("/v1")
 public class SpacexApiV1 {
+    private SpacexAccessClient spacexAccessClient = new SpacexAccessClient();
     @GET
     @Produces("application/json")
+    @Path("/crew-details")
     public String getSpacexCrewDetails() {
-        final Crew crew = new Crew();
-        crew.setName("Robert");
-        crew.setAgency("XXX");
+        return spacexAccessClient.getCrewDetails();
+    }
 
-        final ObjectMapper obj =  new ObjectMapper();
+    @GET
+    @Path("/company-info")
+    @Produces("application/json")
+    public Company getSpacexCompanyInfo() {
+        return spacexAccessClient.getCompanyInfo();
 
-        String jsonResponse = "";
-        try{
-            jsonResponse = obj.writeValueAsString(crew);
-        }catch(final IOException ioException){
-            ioException.printStackTrace();
-        }
+    }
 
-        SpacexAccessClient spacexAccessClient = new SpacexAccessClient();
-        spacexAccessClient.getSpacexCrew();
-        return spacexAccessClient.getSpacexCrew();
+    @GET
+    @Path("/dragons-details")
+    @Produces("application/json")
+    public DragonsDetails getSpacexDragonInfo() {
+        return spacexAccessClient.getDragonsDetails();
 
     }
 }

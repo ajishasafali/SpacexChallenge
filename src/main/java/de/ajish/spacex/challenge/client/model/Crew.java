@@ -1,4 +1,4 @@
-package de.ajish.spacex.challenge.server.model;
+package de.ajish.spacex.challenge.client.model;
 
 
 public class Crew {
