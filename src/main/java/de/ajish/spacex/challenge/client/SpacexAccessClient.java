@@ -10,6 +10,8 @@ import de.ajish.spacex.challenge.client.model.dragon.Dragon;
 import de.ajish.spacex.challenge.client.util.TrustAllHostNameVerifier;
 import de.ajish.spacex.challenge.client.util.TrustAllTrustManager;
 import de.ajish.spacex.challenge.server.model.dragons.DragonsDetails;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -19,16 +21,17 @@ import java.util.List;
 import javax.net.ssl.SSLContext;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
 
 public class SpacexAccessClient {
 
+    private static final Logger logger = LogManager.getLogger(SpacexAccessClient.class);
     private final String restAPIBaseUrl = "https://api.spacexdata.com/v4/";
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper().disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, DeserializationFeature.FAIL_ON_INVALID_SUBTYPE);
 
     Client client = createClient();
     private Response getSpaceXData(final String urlEndpoint) {
+        logger.debug("Request being sent to spaceX v4 api.");
         final String restAPIUrl = restAPIBaseUrl + urlEndpoint;
         return client
                 .target(restAPIUrl)
@@ -36,12 +39,14 @@ public class SpacexAccessClient {
                 .get();
     }
     public String getCrewDetails() {
+        logger.debug("Fetching spacex crew details from spaceX v4 api.");
         Response response = getSpaceXData("crew");
 
         return response.readEntity(String.class);
     }
 
     public Company getCompanyInfo() {
+        logger.debug("Fetching spacex company info from spaceX v4 api.");
         Response response = getSpaceXData("company");
         Company company = null;
         try {
@@ -53,6 +58,7 @@ public class SpacexAccessClient {
     }
 
     public DragonsDetails getDragonsDetails() {
+        logger.debug("Fetching spacex dragons details from spaceX v4 api.");
         Response response = getSpaceXData("dragons");
 
         DragonsDetails dragonsDetails = null;
@@ -72,8 +78,7 @@ public class SpacexAccessClient {
             ctx = SSLContext.getInstance("SSL");
             ctx.init(null, TrustAllTrustManager.get(), new SecureRandom());
         } catch (KeyManagementException | NoSuchAlgorithmException ex) {
-
-            System.err.println("could not initialize SSL Context for trusting all certs");
+            logger.error("could not initialize SSL Context for trusting all certs");
         }
 
         ClientBuilder builder = ClientBuilder.newBuilder().hostnameVerifier(new TrustAllHostNameVerifier());
