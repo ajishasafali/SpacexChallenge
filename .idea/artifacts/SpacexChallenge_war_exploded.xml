@@ -19,6 +19,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.1" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.14.0" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.14.0" />
+          <element id="library" level="project" name="Maven: org.json:json:20201115" />
         </element>
       </element>
       <element id="directory" name="META-INF">

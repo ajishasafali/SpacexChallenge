@@ -1,4 +1,4 @@
-package de.ajish.spacex.challenge.client.util;
+package de.ajish.spacex.challenge.client.util.cert;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;

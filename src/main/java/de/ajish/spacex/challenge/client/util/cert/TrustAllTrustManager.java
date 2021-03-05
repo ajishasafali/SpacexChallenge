@@ -1,4 +1,4 @@
-package de.ajish.spacex.challenge.client.util;
+package de.ajish.spacex.challenge.client.util.cert;
 
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;

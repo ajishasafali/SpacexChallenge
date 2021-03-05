@@ -19,7 +19,7 @@ public class DragonMapper {
     private DragonMapper(){}
 
     /**
-     *
+     * maps the dragon response from spacexApi v4 to internal model
      * @param dragons
      * @return
      */

@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SpaceX</title>
+    <title>SpaceX Wrapper</title>
 </head>
-<body>
-<h1><%= "SpaceX Info" %>
-</h1>
+<body style="background-color:lightgrey;">
+<h2 align="center"><%= "SpaceX API V4-Wrapper" %>
+</h2>
 <br/>
-<a href="spacex-company-servlet">SpaceX company details</a>
+<a href="spacex-company-servlet">Short description of currently available services</a>
 </body>
 </html>
