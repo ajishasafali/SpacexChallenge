@@ -14,7 +14,7 @@ Make sure maven and java home are pointing to the correct  folders
     - deploy {project-directory}/target/SpacexChallenge-1.0-SNAPSHOT.war
     
 # Playtime
-The REST service can be accessed with baseUrl as "http://localhost:8080/SpacexChallenge-1.0-SNAPSHOT/"
+The REST service can be accessed locally with baseUrl as "http://localhost:8080/SpacexChallenge-1.0-SNAPSHOT/"
 At present, this REST service only provides 3 GET endpoints
   - {baseUrl}/api/v1/company-info
   - {baseUrl}/api/v1/dragons-details
