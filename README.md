@@ -1,5 +1,5 @@
 # SpacexChallenge
-This project offers a a maven-J2EE based RestFul webservice.
+This project offers a a maven-J2EE based RESTful webservice.
 
 # Prerequisite
 To run this application on local machine, you’ll need to have maven, Java 8 and Glassfish payara 5. ( I had used Intellij as IDE).
