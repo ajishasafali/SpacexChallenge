@@ -1,5 +1,6 @@
 # SpacexChallenge
-This project offers a a maven-J2EE based RESTful webservice.
+This project offers a a maven-J2EE based RESTful webservice. ThisREST service offers few insights about SpaceX-Dragons and SpaceX-Crew. Additionally also provides the spaceX company information.
+This REST service is built as a wrapper on top of the information provided by https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4
 
 # Prerequisite
 To run this application on local machine, you’ll need to have maven, Java 8 and Glassfish payara 5. ( I had used Intellij as IDE).
@@ -14,7 +15,7 @@ Make sure maven and java home are pointing to the correct  folders
     - deploy {project-directory}/target/SpacexChallenge-1.0-SNAPSHOT.war
     
 # Playtime
-The REST service can be accessed locally with baseUrl as "http://localhost:8080/SpacexChallenge-1.0-SNAPSHOT/"
+The REST service can be accessed locally with baseUrl as "http://localhost:8080/SpacexChallenge-1.0-SNAPSHOT/". 
 At present, this REST service only provides 3 GET endpoints
   - {baseUrl}/api/v1/company-info
   - {baseUrl}/api/v1/dragons-details
