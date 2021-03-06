@@ -2,7 +2,8 @@
 This project offers a a maven-J2EE based RestFul webservice.
 
 # Prerequisite
-To run this application on local machine, you’ll need to have maven, Java 8 and Glassfish payara 5. ( I had used Intellij as IDE)
+To run this application on local machine, you’ll need to have maven, Java 8 and Glassfish payara 5. ( I had used Intellij as IDE).
+Make sure maven and java home are pointing to the correct  folders
 
 # Steps to deploy locally
 - check this project out locally to a folder.
