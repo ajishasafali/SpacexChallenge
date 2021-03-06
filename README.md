@@ -1,9 +1,10 @@
 # SpacexChallenge
-This project offers a a maven-J2EE based RESTful webservice. ThisREST service offers few insights about SpaceX-Dragons and SpaceX-Crew. Additionally also provides the spaceX company information.
-This REST service is built as a wrapper on top of the information provided by https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4
+This project offers a a maven-J2EE based RESTful webservice. This REST service offers few insights about SpaceX-Dragons and SpaceX-Crew. Additionally also provides the spaceX company information.
+This service is built as a wrapper on top of the information provided by https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4
 
 # Access details
 At present, the application is deployed on AWS EBS, baseUrl: http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/
+No authorization is needed to access theservice.
 
 # Offered endpoints
 At present, this REST service only provides 3 GET endpoints
