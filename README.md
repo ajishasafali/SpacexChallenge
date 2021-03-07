@@ -2,19 +2,22 @@
 This project offers a a maven-J2EE based RESTful webservice. This REST service offers few insights about SpaceX-Dragons and SpaceX-Crew. Additionally also provides the spaceX company information.
 This service is built as a wrapper on top of the information provided by https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4
 
-# Access details
-At present, the application is deployed on AWS EBS, baseUrl: http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/
+# Offered endpoints
+At present, the application is deployed on AWS EBS, baseUrl: http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/ \
 No authorization is needed to access theservice.
 
-# Offered endpoints
 At present, this REST service only provides 3 GET endpoints
   - {baseUrl}/api/v1/company-info
   - {baseUrl}/api/v1/dragons-details
   - {baseUrl}/api/v1/crew-details
 
-Note: /crew-details endpoint offers a possibility to pass a query parameter 'agency'
-
-Template with query parameter: {baseUrl}/api/v1/crew-details?agency={agency}
+Note: /crew-details endpoint offers a possibility to pass a query parameter 'agency' \
+Template with query parameter: {baseUrl}/api/v1/crew-details?agency={agency} \
+## Endpoints:
+- http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/api/v1/company-info
+- http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/api/v1/dragons-details
+- http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/api/v1/crew-details
+- http://sie-space-x-challenge-rest-service-env.eba-32pahimi.eu-central-1.elasticbeanstalk.com/api/v1/crew-details?agency=ESA
 
 # Prerequisite for local deployment
 To run this application on local machine, you’ll need to have maven, Java 8 and Glassfish payara 5. ( I had used Intellij as IDE).
